@@ -29,6 +29,6 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/workouts',[WorkoutController::class,'index'])->middleware(['auth'])->name('workout.index');
+Route::resource('/workouts',WorkoutController::class)->middleware(['auth']);
 
 require __DIR__.'/auth.php';

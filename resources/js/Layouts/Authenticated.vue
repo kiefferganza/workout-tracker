@@ -19,7 +19,7 @@
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </BreezeNavLink>
-                                <BreezeNavLink :href="route('workout.index')" :active="route().current('workout.index')">
+                                <BreezeNavLink :href="route('workouts.index')" :active="route().current('workouts.index')">
                                     Workouts
                                 </BreezeNavLink>
                             </div>
