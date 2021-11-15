@@ -31,4 +31,38 @@ class WorkoutController extends Controller
            'workouts' => $workout
         ]);
     }
+
+    public function create()
+    {
+        return Inertia::render('Workout/create');
+    }
+
+    public function store(Request $request)
+    {
+        //
+    }
+
+    public function show($id)
+    {
+        //
+    }
+
+    public function edit($id)
+    {
+        //
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+
+    public function destroy($id)
+    {
+        //
+    }
+
+
 }

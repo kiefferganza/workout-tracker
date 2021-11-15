@@ -15,7 +15,9 @@
                             <h3 class="font-semibold text-base text-blueGray-700">Workout Logs</h3>
                         </div>
                         <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-                            <button class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">Add Workout</button>
+                            <inertia-link :href="`/workouts/create`" class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                                Add Workout
+                            </inertia-link>
                         </div>
                     </div>
                 </div>
@@ -54,13 +56,14 @@
 
 <script>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue'
-import { Head } from '@inertiajs/inertia-vue3';
+import { Head,InertiaLink } from '@inertiajs/inertia-vue3';
 import moment from 'moment';
 
 export default {
     components: {
         BreezeAuthenticatedLayout,
         Head,
+        InertiaLink
     },
     props: {
         workouts: Object
